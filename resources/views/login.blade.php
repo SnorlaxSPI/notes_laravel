@@ -1,6 +1,6 @@
 @extends('layouts.main_layout')
 @section('content')
-    <div class="container mt-5">
+<div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6 col-sm-8">
             <div class="card p-5">
@@ -21,17 +21,17 @@
 
                                 {{-- show error --}}
                                 @error('text_username')
-                                    <div class="text-danger">{{ $message }}</div>
+                                <div class="text-danger">{{ $message }}</div>
                                 @enderror
 
                             </div>
                             <div class="mb-3">
                                 <label for="text_password" class="form-label">Password</label>
-                                <input type="password" class="form-control bg-dark text-info" name="text_password"  value="{{ old('text_password') }}" required>
+                                <input type="password" class="form-control bg-dark text-info" name="text_password" value="{{ old('text_password') }}" required>
 
                                 {{-- show error --}}
                                 @error('text_password')
-                                    <div class="text-danger">{{ $message }}</div>
+                                <div class="text-danger">{{ $message }}</div>
                                 @enderror
 
                             </div>
@@ -40,12 +40,13 @@
                             </div>
                         </form>
 
-                                 {{-- invalid login --}}
-                                 @if(session('loginError'))
-                                     <div class="alert alert-danger text-center">
-                                        {{ session('loginError') }}
-                                    </div>
-                                 @endif
+                        {{-- invalid login --}}
+                        @if(session('loginError'))
+                        <div class="alert alert-danger text-center">
+                            {{ session('loginError') }}
+                        </div>
+                        @endif
+
                     </div>
                 </div>
 
@@ -56,5 +57,5 @@
             </div>
         </div>
     </div>
-    </div>
+</div>
 @endsection
